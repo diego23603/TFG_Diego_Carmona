@@ -1,0 +1,78 @@
+# Node
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Env & config
+.env
+.env.local
+.env.*.local
+
+# GitHub Codespaces
+.devcontainer/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sw?
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Vite
+*.tar.gz
+vite.config.ts.*
+server/public/
+
+# Drizzle ORM
+drizzle/
+drizzle.config.ts
+migrations/meta/
+migrations/*.lock
+
+# TypeScript
+tsconfig.tsbuildinfo
+tsconfig.*.tsbuildinfo
+
+# Temporal / backups
+*.tgz
+*.bak
+*.tmp
+*~
+*.patch
+*.diff
+
+# Producción / tokens
+cookies.txt
+
+# Coverage / tests
+coverage/
+*.lcov
+
+# Build cache
+.cache/
+turbo/
+
+# Scripts locales opcionales (si contienen datos sensibles o de test)
+scripts/create-admin*.ts
+scripts/seed.ts
+
+# Parcheos y migraciones temporales
+patches/
+generate-migrations.ts
+migrate.ts
+
+# Dumps y bases de datos locales (si aplican)
+*.sqlite
+*.sql
+*.dump

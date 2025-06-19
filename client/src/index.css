@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 120 35% 28%; /* equi-green: '#2C5F2D' */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 38 58% 59%; /* equi-gold: '#E8C547' */
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 36 35% 45%; /* equi-brown: '#97704F' */
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Chart Colors */
+  --chart-1: 120 35% 28%;
+  --chart-2: 36 35% 45%;
+  --chart-3: 38 58% 59%;
+  --chart-4: 0 0% 97%;
+  --chart-5: 0 0% 20%;
+  
+  /* Custom equestrian colors */
+  --equi-green: 120 35% 28%;
+  --equi-light-green: 120 25% 40%;
+  --equi-brown: 36 35% 45%;
+  --equi-light-brown: 36 35% 55%;
+  --equi-gold: 38 58% 59%;
+  --equi-cream: 34 40% 95%;
+  --equi-charcoal: 0 0% 20%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 120 35% 28%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 38 58% 59%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 36 35% 45%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-[#F9F5EB] text-[#333333];
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.nav-item-hover:hover {
+  border-bottom: 2px solid #E8C547;
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+.appointment-hover:hover {
+  border-left: 4px solid #2C5F2D;
+}
+
+/* Animaciones para HomePage */
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Colores personalizados para tailwind */
+.text-equi-green {
+  color: hsl(120, 35%, 28%);
+}
+
+.text-equi-brown {
+  color: hsl(36, 35%, 45%);
+}
+
+.text-equi-light-green {
+  color: hsl(120, 25%, 40%);
+}
+
+.text-equi-gold {
+  color: hsl(38, 58%, 59%);
+}
+
+.text-equi-blue {
+  color: #3B82F6;
+}
+
+.bg-equi-green {
+  background-color: hsl(120, 35%, 28%);
+}
+
+.bg-equi-light-green {
+  background-color: hsl(120, 25%, 40%);
+}
+
+.bg-equi-charcoal {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.border-equi-green {
+  border-color: hsl(120, 35%, 28%);
+}
+
+.hover\:bg-equi-green\/10:hover {
+  background-color: hsla(120, 35%, 28%, 0.1);
+}
+
+.hover\:bg-equi-light-green:hover {
+  background-color: hsl(120, 25%, 40%);
+}
+
+.fill-equi-gold {
+  fill: hsl(38, 58%, 59%);
+}
